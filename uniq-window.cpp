@@ -38,7 +38,7 @@ int main(int argc, char** argv) {
         // If it's not present, print the line and add it to the cache
         if (cacheHit == cache.end()) {
             std::cout << line << std::endl;
-            cache[line] = millis();
+            cache[line] = now;
         } else if (DEBUG) {
             std::printf(
                 "!!! Ignored line \"%s\" - cache=%ld - now=%ld\n",
